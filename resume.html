@@ -16,6 +16,12 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .max-img {
+                height: 320px !important;
+                min-width: 100% !important;
+            }
+        </style>
     </head>
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
@@ -41,230 +47,213 @@
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-11 col-xl-9 col-xxl-8">
-                        <!-- Experience Section-->
-                        <section>
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h2 class="text-gradient fw-bolder mb-0">Work Experiences</h2>
-                                <!-- Download resume button-->
-                                <!-- Note: Set the link href target to a PDF file within your project-->
-                                <!-- <a class="btn btn-primary px-4 py-3" href="https://gonzagaelmer.github.io/resume.html" attribute-list download> -->
-                                    <!-- <div class="d-inline-block bi bi-download me-2"></div> -->
-                                    <!-- Download Resume -->
-                                <!-- </a> -->
+
+                        <!-- Professional skills-->
+                        <section class="mb-5">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="feature bg-gradient-primary-to-orange text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
+                                <h3 class="fw-bolder mb-0"><span class="text-orange d-inline">Professional Skills</span></h3>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-2">
+                                <div class="col mb-4 mb-sm-4 mb-md-0"><div class="align-items-center bg-white rounded-4 p-3 h-100">Website Development</div></div>
+                                <div class="col mb-2 mb-sm-4 mb-md-0"><div class="align-items-center bg-white rounded-4 p-3 h-100">Android Development</div></div>
+                            </div>
+                        </section>
+
+
+                        <!-- Work Experiences-->
+                        <section class="mb-5">
+                            <div class="d-flex align-items-center justify-content mb-4">
+                                <div class="feature bg-gradient-primary-to-orange text-white rounded-3 me-3"><i class="bi bi-briefcase-fill"></i></div>
+                                    <h3 class="fw-bolder mb-0"><span class="text-orange d-inline">Work Experiences</span></h3>
                             </div>
                             <!-- Experience Card 1-->
-                            <div class="card shadow border-0 rounded-4 mb-4">
+                            <div class="card border-0 rounded-4 mb-4">
                                 <div class="card-body p-4">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col-lg-7">
-                                            <div class="text-gradient fw-bolder mb-2">Android Developer</div>
-                                            <div class="mb-2">
-                                                <div class="small fw-bolder">Forty Degrees Celcius Inc.</div>
-                                                <div class="small text-muted">Apas, Cebu City, Philippines</div>
-                                                <div class="smaller text-muted">2022 - Present</div>
+                                    <div class="row gx-5">
+                                        <div class="col-lg-5">
+                                            <h5 class="fw-bolder">Junior Android Engineer</h5>
+                                            <div class="text-gradient small fw-bold">1 year and 9 months</div>
+                                            <div class="mt-1">
+                                                <div class="text-gradient fw-bolder">Forty Degrees Celcius Inc.</div>
+                                                <div class="mb-2">Apas, Cebu City, Philippines</div>
+                                                <ul class="text-muted">
+                                                    <li class="mb-1">
+                                                        utilizes high-quality and standards-compliant code like Android Java, Kotlin, Volley, Retrofit, Firebase, XML and libraries in the development.
+                                                    </li> 
+                                                    <li class="mb-1">
+                                                        builds and consumes API's using Postman as an API Platform.
+                                                    </li> 
+                                                </ul>
                                             </div>
                                         </div>
                                         <div class="col text-center text-lg-start mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4  mt-2 mt-sm-0">
-                                                <div class="fst-italic">
-                                                    <div class="small fw-bolder">Rockstar Awardee</div>
-                                                </div>
+                                            <div class="bg-light p-2 rounded-2  mt-2 mt-sm-0">
+                                                <img src="images/rockstar_award_android.png" class="img-fluid max-img"/>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Experience Card 2-->
-                            <div class="card shadow border-0 rounded-4 mb-4">
+                            <div class="card border-0 rounded-4 mb-4">
                                 <div class="card-body p-4">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col-lg-7">
-                                            <div class="text-gradient fw-bolder mb-2">Website Developer</div>
-                                            <div class="mb-2">
-                                                <div class="small fw-bolder">Forty Degrees Celcius Inc.</div>
-                                                <div class="small text-muted">Apas, Cebu City, Philippines</div>
-                                                <div class="smaller text-muted">2021 - 2022</div>
+                                    <div class="row gx-5">
+                                        <div class="col-lg-5">
+                                            <h5 class="fw-bolder">Junior Website Engineer</h5>
+                                            <div class="text-gradient small fw-bold">1 year and 7 months</div>
+                                            <div class="mt-1">
+                                                <div class="text-gradient fw-bolder">Forty Degrees Celcius Inc.</div>
+                                                <div class="mb-2">Apas, Cebu City, Philippines</div>
+                                                <ul class="text-muted">
+                                                    <li class="mb-1">
+                                                        utilizes high-quality and standard code using progamming languages such as PHP, CakePhp, SQL, JavaScript, JQuery, Html and CSS.
+                                                    </li> 
+                                                    <li class="mb-1">
+                                                        creates API routes and responses based on APP dev's request and needs.
+                                                    </li> 
+                                                </ul>
                                             </div>
                                         </div>
                                         <div class="col text-center text-lg-start mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4  mt-2 mt-sm-0">
-                                                <div class="fst-italic">
-                                                    <div class="small fw-bolder">Rockstar Awardee</div>
-                                                </div>
+                                            <div class="bg-light p-2 rounded-2  mt-2 mt-sm-0">
+                                                <img src="images/rockstar_award_web.png" class="img-fluid max-img"/>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Experience Card 3-->
-                            <!-- <div class="card shadow border-0 rounded-4 mb-4">
-                                <div class="card-body p-4">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col-lg-7">
-                                            <div class="text-gradient fw-bolder mb-2">2020 - 2021</div>
-                                            <div class="mb-2">
-                                                <div class="small fw-bolder">Technical Support - Chat</div>
-                                                <div class="small text-muted">Concentrix</div>
-                                                <div class="small text-muted">Mandaue, Cebu, Philippines</div>
-                                            </div>
-                                        </div>
-                                        <div class="col text-center text-lg-start mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4  mt-2 mt-sm-0">
-                                                <div class="fst-italic">
-                                                    <div class="small text-muted">Performance Awardee</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
                         </section>
 
                         <!-- Skills Section-->
-                        <section>
-                            <!-- Skillset Card-->
-                            <div class="card shadow border-0 rounded-4 mt-5">
-                                <div class="card-body p-4">
-                                    <!-- Professional skills list-->
-                                    <div class="mb-3 mb-sm-4 mb-md-5">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <div class="feature bg-gradient-primary-to-orange text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-orange d-inline">Professional Skills</span></h3>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-2 mb-sm-2 mb-md-4">
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="align-items-center bg-light rounded-4 p-3 h-100">Website Development</div></div>
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="align-items-center bg-light rounded-4 p-3 h-100">Android Development</div></div>
-                                        </div>
-                                    </div>
-                                    <!-- Languages list-->
-                                    <div class="mb-0">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-orange text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-orange d-inline">Languages and Frameworks</span></h3>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3 mb-md-4">
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">PHP</div></div>
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">MySQL</div></div>
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Javascript</div></div>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3 mb-md-4">
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">HTML</div></div>
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">CSS</div></div>
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">JQUERY</div></div>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3 mb-md-4">
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">CakePHP</div></div>
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Java</div></div>
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Android Java</div></div>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3 mb-md-4">
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Angular Basics</div></div>
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Swift Basics</div></div>
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Python Basics</div></div>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3">
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">C/C++ Basics</div></div>
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Git Basics</div></div>
-                                            <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">GitHub Basics</div></div>
-                                        </div>
-                                    </div>
+                        <section class="mb-5">
+                            <div class="d-flex align-items-center justify-content mb-4">
+                                <div class="feature bg-gradient-primary-to-orange text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
+                                    <h3 class="fw-bolder mb-0"><span class="text-orange d-inline">Skills ans Assets</span></h3>
+                            </div>
+                            <!-- Assets list-->
+                            <div class="mb-0">
+                                <div class="row row-cols-2 row-cols-md-4 mb-md-4">
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">HTML</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">CSS</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Javascript</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">JQUERY</div></div>
+                                </div>
+                                <div class="row row-cols-2 row-cols-md-4 mb-md-4">
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">PHP</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">CakePhp</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Laravel</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">SQL/MySQL</div></div>
+                                </div>
+                                <div class="row row-cols-2 row-cols-md-4 mb-md-4">
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Android Java</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Kotlin</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">iOS/Swift</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Git and Github</div></div>
+                                </div>
+                                <div class="row row-cols-2 row-cols-md-4 mb-md-4">
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Angular/Vue</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Java</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Python</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">C/C++</div></div>
+                                </div>
+                                <div class="row row-cols-2 row-cols-md-4 mb-md-4">
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">English speaker</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Team worker</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Critical thinker</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Problem solver</div></div>
+                                </div>
+                                <div class="row row-cols-2 row-cols-md-4 mb-md-4">
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Decision maker</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Time manager</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Accountable</div></div>
+                                    <div class="col mb-4 mb-sm-4 mb-md-0"><div class="d-flex align-items-center bg-white rounded-4 p-3 h-100">Resilient</div></div>
                                 </div>
                             </div>
                         </section>
 
                         <!-- Education Section-->
-                        <section>
-                            <h2 class="text-gradient fw-bolder mt-5 mb-4">Educational Background</h2>
+                        <section class="mb-5">
+                            <div class="d-flex align-items-center justify-content mb-4">
+                                <div class="feature bg-gradient-primary-to-orange text-white rounded-3 me-3"><i class="bi bi-book-fill"></i></div>
+                                    <h3 class="fw-bolder mb-0"><span class="text-orange d-inline">Educational Background</span></h3>
+                            </div>
                             <!-- Education Card 1-->
-                            <div class="card shadow border-0 rounded-4 mb-4">
+                            <div class="card border-0 rounded-4 mb-4">
                                 <div class="card-body p-4">
-                                    <div class="row align-items-center gx-5">
+                                    <div class="row gx-5">
                                         <div class="col-lg-7">
-                                            <div class="text-gradient fw-bolder mb-2">2017 - 2019</div>
+                                            <div class="fw-bolder mb-1">2017 - 2019</div>
                                             <div class="mb-2">
-                                                <div class="small fw-bolder">Bachelor of Science in Information Technology</div>
-                                                <div class="small">Cebu Technological University</div>
-                                                <div class="small text-muted">Graduate</div>
+                                                <div class="text-gradient fw-bolder mb-1">Bachelor of Science in Information Technology</div>
+                                                <div class="text">Cebu Technological University</div>
+                                                <div class="text-muted">Graduate</div>
                                             </div>
                                         </div>
-                                        <div class="col text-center text-lg-start mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4  mt-2 mt-sm-0">
-                                                <div class="fst-italic">
-                                                    <div class="small text-muted">SCS Service Awardee</div>
-                                                    <div class="small text-muted">SCS Best in OJT</div>
-                                                    <div class="small text-muted">Consistent Dean's Lister</div>
-                                                </div>
-                                            </div>
+                                        <div class="col text-lg-start mb-lg-0">
+                                            <p class="text-muted mb-1"><i class="bi bi-award text-orange"></i> Service Awardee</p>
+                                            <p class="text-muted mb-1"><i class="bi bi-award text-orange"></i> Best in OJT</p>
+                                            <p class="text-muted mb-1"><i class="bi bi-award text-orange"></i> NC-II Passer</p>
+                                            <p class="text-muted mb-1"><i class="bi bi-award text-orange"></i> Consistent Dean's Lister</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Education Card 2-->
-                            <div class="card shadow border-0 rounded-4 mb-4">
+                            <div class="card border-0 rounded-4 mb-4">
                                 <div class="card-body p-4">
                                     <div class="row align-items-center gx-5">
                                         <div class="col-lg-7">
-                                            <div class="text-gradient fw-bolder mb-2">2015 - 2017</div>
+                                            <div class="fw-bolder mb-1">2015 - 2017</div>
                                             <div class="mb-2">
-                                                <div class="small fw-bolder">Associate in Computer Technology</div>
-                                                <div class="small">Cebu Technological University</div>
-                                                <div class="small text-muted">Graduate</div>
+                                                <div class="text-gradient fw-bolder mb-1">Associate in Computer Technology</div>
+                                                <div class="text">Cebu Technological University</div>
+                                                <div class="text-muted">Graduate</div>
                                             </div>
                                         </div>
-                                        <div class="col text-center text-lg-start mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4  mt-2 mt-sm-0">
-                                                <div class="fst-italic">
-                                                    <div class="small text-muted">Consistent Dean's Lister</div>
-                                                    <div class="small text-muted">Oratorical Champion</div>
-                                                    <div class="small text-muted">Best in Debate (Pol-Sci Class)</div>
-                                                </div>
-                                            </div>
+                                        <div class="col text-lg-start mb-lg-0">
+                                            <p class="text-muted mb-1"><i class="bi bi-award text-orange"></i> Highest GPA</p>
+                                            <p class="text-muted mb-1"><i class="bi bi-award text-orange"></i> Consistent Dean's Lister</p>
+                                            <p class="text-muted mb-1"><i class="bi bi-award text-orange"></i> Oratorical Champion</p>
+                                            <p class="text-muted mb-1"><i class="bi bi-award text-orange"></i> Best Debater</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Education Card 3-->
-                            <div class="card shadow border-0 rounded-4 mb-4">
+                            <div class="card border-0 rounded-4 mb-4">
                                 <div class="card-body p-4">
                                     <div class="row align-items-center gx-5">
                                         <div class="col-lg-7">
-                                            <div class="text-gradient fw-bolder mb-2">2014 - 2015</div>
+                                            <div class="fw-bolder mb-1">2014 - 2015</div>
                                             <div class="mb-2">
-                                                <div class="small fw-bolder">Bachelor of Science in Electronics and Communication Engineering</div>
-                                                <div class="small">University of San Carlos</div>
-                                                <div class="small text-muted">Undergraduate</div>
+                                                <div class="text-gradient fw-bolder mb-1">Bachelor of Science in Electronics and Communication Engineering</div>
+                                                <div class="text">University of San Carlos</div>
+                                                <div class="text-muted">Undergraduate</div>
                                             </div>
                                         </div>
-                                        <div class="col text-center text-lg-start mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4  mt-2 mt-sm-0">
-                                                <div class="fst-italic">
-                                                    <div class="small text-muted">50% Academic Scholar</div>
-                                                    <div class="small text-muted">Block Officer</div>
-                                                </div>
-                                            </div>
+                                        <div class="col text-lg-start mb-lg-0">
+                                            <p class="text-muted mb-1"><i class="bi bi-award text-orange"></i> 50% Academic Scholar</p>
+                                            <p class="text-muted mb-1"><i class="bi bi-award text-orange"></i> Block Officer</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Education Card 3-->
-                            <div class="card shadow border-0 rounded-4 mb-4">
+                            <div class="card border-0 rounded-4 mb-4">
                                 <div class="card-body p-4">
                                     <div class="row align-items-center gx-5">
                                         <div class="col-lg-7">
-                                            <div class="text-gradient fw-bolder mb-2">2010 - 2014</div>
+                                            <div class="fw-bolder mb-1">2010 - 2014</div>
                                             <div class="mb-2">
-                                                <div class="small fw-bolder">Pulpogan National High School</div>
-                                                <div class="small text-muted">Consolacion, Cebu, Philippines</div>
-                                                <div class="small text-muted">Graduate</div>
+                                                <div class="text-gradient fw-bolder mb-1">High School Diploma</div>
+                                                <div class="text">Pulpogan National High School</div>
+                                                <div class="text-muted">Graduate</div>
                                             </div>
                                         </div>
-                                        <div class="col text-center text-lg-start mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4  mt-2 mt-sm-0">
-                                                <div class="fst-italic">
-                                                    <div class="small text-muted">1st Honorable Mention</div>
-                                                    <div class="small text-muted">10+ other awards</div>
-                                                </div>
-                                            </div>
+                                        <div class="col text-lg-start mb-lg-0">
+                                            <p class="text-muted mb-1"><i class="bi bi-award text-orange"></i> 1st Honorable Mention</p>
+                                            <p class="text-muted mb-1"><i class="bi bi-award text-orange"></i> 10+ other awards</p>
                                         </div>
                                     </div>
                                 </div>
@@ -284,7 +273,7 @@
                         <span class="mx-1">&middot;</span>
                         <a class="small" href="#!">Terms</a>
                         <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Contact</a>
+                        <a class="small" href="contact.html">Contact</a>
                     </div>
                 </div>
             </div>
