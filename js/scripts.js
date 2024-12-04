@@ -5,3 +5,17 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+
+showCreditsYear();
+
+function showCreditsYear() {
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year-sm').textContent = new Date().getFullYear();
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
