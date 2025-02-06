@@ -11789,7 +11789,10 @@ a.text-orange:hover {
     color: #fd7e14;
 }
 
-/* Animations */
+/* Effects and Animations */
+.anim-delay {
+  left: -50px;
+}
 
 .anim-change-bg:hover {
   background: -webkit-linear-gradient(315deg, #1e30f3 0%, #fd7e14 100%);
@@ -11807,16 +11810,21 @@ a.text-orange:hover {
 
 .anim-right-to-left {
   position: relative;
-  animation: animRightToLeft ease-in-out 1s;
+  animation: animRightToLeft ease-in-out 1s forwards;
 }
 
-.anim-to-bottom {
+.anim-from-bottom {
   position: relative;
-  animation: animToBottom ease-in-out 1s;
+  animation: animFromBottom ease-in-out 1s;
 }
 
 .anim-zoom:hover {
   scale: 1.01 !important;
+}
+
+.anim-zoom-loop {
+  position: relative;
+  animation: animZoomLoop 1s infinite;
 }
 
 @keyframes animRightToLeft {
@@ -11829,7 +11837,13 @@ a.text-orange:hover {
   100% { left: 0px;}
 }
 
-@keyframes animToBottom {
-  0% { top: -50px;}
-  100% { top: 0px;}
+@keyframes animFromBottom {
+  0% { bottom: -50px;}
+  100% { bottom: 0px;}
+}
+
+@keyframes animZoomLoop {
+  0% { scale: 1;}
+  50% { scale: 1.05}
+  100% { scale: 1;}
 }

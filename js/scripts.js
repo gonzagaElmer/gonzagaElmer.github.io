@@ -19,3 +19,21 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+
+// Create the intersection observer
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('anim-left-to-right'); // Add animation class when in view
+            entry.target.classList.remove('anim-delay'); // Add animation class when in view
+            observer.unobserve(entry.target); // Stop observing after animation starts
+        }
+    });
+}, { threshold: 0.4 }); // Trigger when 40% of the element is in view
+
+// Select the elements you want to observe
+const cards = document.querySelectorAll('.anim-delay');
+
+// Start observing each element
+cards.forEach(box => observer.observe(box));
+  
