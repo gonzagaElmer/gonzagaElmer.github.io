@@ -11788,3 +11788,23 @@ a:hover {
 a.text-orange:hover {
     color: #fd7e14;
 }
+
+.anim-left-to-right {
+  position: relative;
+  animation: animLeftToRight 1s;
+}
+
+.anim-right-to-left {
+  position: relative;
+  animation: animRightToLeft 1s;
+}
+
+@keyframes animRightToLeft {
+  0% { left: 50px;}
+  100% { left: 0;}
+}
+
+@keyframes animLeftToRight {
+  0% { left: -50px;}
+  100% { left: 0px;}
+}
