@@ -11789,14 +11789,34 @@ a.text-orange:hover {
     color: #fd7e14;
 }
 
+/* Animations */
+
+.anim-change-bg:hover {
+  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #fd7e14 100%);
+  color: white !important;
+}
+
+.anim-darken-shadow:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
 .anim-left-to-right {
   position: relative;
-  animation: animLeftToRight 1s;
+  animation: animLeftToRight ease-in-out 1s;
 }
 
 .anim-right-to-left {
   position: relative;
-  animation: animRightToLeft 1s;
+  animation: animRightToLeft ease-in-out 1s;
+}
+
+.anim-to-bottom {
+  position: relative;
+  animation: animToBottom ease-in-out 1s;
+}
+
+.anim-zoom:hover {
+  scale: 1.01 !important;
 }
 
 @keyframes animRightToLeft {
@@ -11807,4 +11827,9 @@ a.text-orange:hover {
 @keyframes animLeftToRight {
   0% { left: -50px;}
   100% { left: 0px;}
+}
+
+@keyframes animToBottom {
+  0% { top: -50px;}
+  100% { top: 0px;}
 }
