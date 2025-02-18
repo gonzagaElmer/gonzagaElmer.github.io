@@ -29,7 +29,7 @@ const observer = new IntersectionObserver((entries, observer) => {
             observer.unobserve(entry.target); // Stop observing after animation starts
         }
     });
-}, { threshold: 0.4 }); // Trigger when 40% of the element is in view
+}, { threshold: 0.8 }); // Trigger when 80% of the element is in view
 
 // Select the elements you want to observe
 const cards = document.querySelectorAll('.anim-delay');
