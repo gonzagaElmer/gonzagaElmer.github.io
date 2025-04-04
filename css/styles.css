@@ -11769,6 +11769,11 @@ a.text-orange:hover {
 }
 
 /* Effects and Animations */
+.max-img {
+  min-height: 600px !important;
+  width: 100% !important;
+}
+
 .anim-delay {
   left: -50px;
 }
