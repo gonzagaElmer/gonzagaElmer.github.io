@@ -11740,6 +11740,16 @@ html {
 }
 
 /* Custom CSS */
+.custom-bg {
+  position: relative !important; 
+  width: 100% !important; 
+  height: auto !important; 
+  background-image: url('../images/wide_bg.png') !important; 
+  background-size: contain !important; 
+  background-position: center !important; 
+  background-repeat: no-repeat !important; 
+  background-color: white;
+}
 
 .bg-gradient {
   background: linear-gradient(130deg, #1e30f3 0%, #fd7e14 100%);
@@ -11775,7 +11785,7 @@ a.text-orange:hover {
 }
 
 .anim-delay {
-  left: -50px;
+  bottom: -50px;
 }
 
 .anim-change-bg:hover {
