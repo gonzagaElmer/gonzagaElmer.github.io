@@ -1,18 +1,7 @@
-// Contact -----------------------------------------------------------------------------------
-var submitBtn = document.getElementsById("submitButton");
-
-if (submitBtn != null || submitBtn.length > 0) {
-    for (var i = 0; i < submitBtn.length; i++) {
-        submitBtn[i].addEventListener('click', function() {
-            alert('The form will be live soon!');
-        });
-    }
-}
-
 // Projects -----------------------------------------------------------------------------------
-var animFromBottom = document.getElementsByClassName("anim-from-bottom");
+var animDelay = document.getElementsByClassName("anim-delay");
 
-if (animFromBottom != null) {
+if (animDelay != null) {
     setProjectsAnim();
 }
 
