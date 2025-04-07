@@ -1,12 +1,22 @@
-/*!
-* Start Bootstrap - Personal v1.0.1 (https://startbootstrap.com/template-overviews/personal)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-personal/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+// Projects -----------------------------------------------------------------------------------
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('anim-left-to-right'); // Add animation class when in view
+            entry.target.classList.remove('anim-delay'); // Add animation class when in view
+            observer.unobserve(entry.target); // Stop observing after animation starts
+        }
+    });
+}, { threshold: 0.8 }); // Trigger when 80% of the element is in view
 
-// Resume - start
+// Select the elements you want to observe
+const cards = document.querySelectorAll('.anim-delay');
+
+// Start observing each element
+cards.forEach(box => observer.observe(box));
+
+
+// Resume  -----------------------------------------------------------------------------------
 showAndroidExp();
 
 function showAndroidExp() {
@@ -29,8 +39,9 @@ function showAndroidExp() {
     // Display the result
     document.getElementById("exp-year-month").textContent = `${yearDiff} years ${ (monthDiff > 0) ? ` and ${monthDiff} months` : ``}`;
 }
-// Resume - end
 
+
+// General -----------------------------------------------------------------------------------
 showCreditsYear();
 
 function showCreditsYear() {
@@ -38,27 +49,11 @@ function showCreditsYear() {
     document.getElementById('year-sm').textContent = new Date().getFullYear();
 }
 
+// click bottom tab links
 function scrollToTop() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 }
-
-// Create the intersection observer
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('anim-left-to-right'); // Add animation class when in view
-            entry.target.classList.remove('anim-delay'); // Add animation class when in view
-            observer.unobserve(entry.target); // Stop observing after animation starts
-        }
-    });
-}, { threshold: 0.8 }); // Trigger when 80% of the element is in view
-
-// Select the elements you want to observe
-const cards = document.querySelectorAll('.anim-delay');
-
-// Start observing each element
-cards.forEach(box => observer.observe(box));
   
