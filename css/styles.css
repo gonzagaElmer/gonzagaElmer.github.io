@@ -11740,17 +11740,6 @@ html {
 }
 
 /* Custom CSS */
-.custom-bg {
-  position: relative !important; 
-  width: 100% !important; 
-  height: auto !important; 
-  background-image: url('../images/wide_bg.png') !important; 
-  background-size: contain !important; 
-  background-position: center !important; 
-  background-repeat: no-repeat !important; 
-  background-color: white;
-}
-
 .bg-gradient {
   background: linear-gradient(130deg, #1e30f3 0%, #fd7e14 100%);
 }
@@ -11778,11 +11767,29 @@ a.text-orange:hover {
     color: #fd7e14;
 }
 
-/* Effects and Animations */
-.max-img {
-  min-height: 600px !important;
-  width: 100% !important;
+.custom-bg {
+  position: relative !important; 
+  width: 100% !important; 
+  height: auto !important; 
+  background-image: url('../images/bg_wide.png') !important; 
+  background-size: contain !important; 
+  background-position: center !important; 
+  background-repeat: no-repeat !important; 
+  background-color: white;
 }
+
+.custom-bg-cover {
+  position: relative !important; 
+  width: 100% !important; 
+  height: auto !important; 
+  background-image: url('../images/bg_wide.png') !important; 
+  background-size: cover !important; 
+  background-position: center !important; 
+  background-repeat: no-repeat !important; 
+  background-color: white;
+}
+
+/* Effects and Animations */
 
 .anim-delay {
   bottom: -50px;
@@ -11840,4 +11847,39 @@ a.text-orange:hover {
   0% { scale: 1;}
   50% { scale: 1.05}
   100% { scale: 1;}
+}
+
+/* About award photo queries */
+.max-img {
+  width: 100% !important;
+}
+
+@media only screen and (min-width: 100px) {
+  .max-img {
+    min-height: 300px !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .max-img {
+    min-height: 400px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .max-img {
+    min-height: 500px !important;
+  }
+} 
+
+@media only screen and (min-width: 992px) {
+  .max-img {
+    min-height: 700px !important;
+  }
+} 
+
+@media only screen and (min-width: 1200px) {
+  .max-img {
+    min-height: 650px !important;
+  }
 }
