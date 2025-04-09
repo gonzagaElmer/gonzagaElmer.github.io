@@ -11789,6 +11789,16 @@ a.text-orange:hover {
   background-color: white;
 }
 
+.custom-bg-left {    
+  position: relative !important;
+  width: auto !important;
+  height: auto !important;
+  background-size: contain !important;
+  background-position: left !important;
+  background-repeat: no-repeat !important;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 /* Effects and Animations */
 
 .anim-delay {
@@ -11854,15 +11864,38 @@ a.text-orange:hover {
   width: 100% !important;
 }
 
-@media only screen and (min-width: 100px) {
+ul li::marker {
+  color: #1e30f3;
+}
+
+
+@media only screen and (min-width: 0px) {
   .max-img {
     min-height: 300px !important;
+  }
+
+  .custom-bg-left {
+    background-image: none !important;
+  }
+
+  .ps-proj-desc {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .max-img {
     min-height: 400px !important;
+  }
+
+  .custom-bg-left {
+    background-image: url('../images/bg_left.png') !important;
+  }
+
+  .ps-proj-desc {
+    padding-left: 35px;
+    padding-right: 20px;
   }
 }
 
