@@ -11641,7 +11641,7 @@ html {
 /*====================================================================================================================*/
 /*==================================================== Custom CSS ====================================================*/
 /*====================================================================================================================*/
-body {
+:root {
   --custom-linear-gradient: linear-gradient(130deg, #1e30f3 0%, #fd7e14 100%);
 }
 
@@ -11677,6 +11677,12 @@ body {
 
 .profile-img-container::before{
   content: var(--tooltip-text);
+}
+
+/* dont show tooltip if not desktop/laptop */
+.profile-img-container::before,
+.profile-img-container::after {
+  display: none;
 }
 
 .bg-gradient {
@@ -11745,7 +11751,7 @@ a.text-orange:hover {
 }
 
 .anim-change-bg:hover {
-  background: var(--custom-linear-gradient)
+  background: var(--custom-linear-gradient);
   color: white !important;
 }
 
@@ -11958,5 +11964,10 @@ ul li::marker {
   }
   .max-img {
     min-height: 650px !important;
+  }
+
+  .profile-img-container::before,
+  .profile-img-container::after {
+    display: block;
   }
 }
