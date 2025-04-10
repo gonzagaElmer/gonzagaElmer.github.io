@@ -11638,114 +11638,53 @@ html {
   fill: #1e30f3;
 }
 
-@media (min-width: 576px) {
-  .profile {
-    height: 60vw;
-    width: 60vw;
-  }
-  .profile .profile-img {
-    height: 65vw;
-  }
-  .profile .dots-1 {
-    width: 3vw;
-    right: 1.5vw;
-  }
-  .profile .dots-2 {
-    width: 3vw;
-    right: -4vw;
-  }
-  .profile .dots-3 {
-    width: 3vw;
-    left: 1.5vw;
-  }
-  .profile .dots-4 {
-    width: 3vw;
-    left: -4vw;
-  }
-}
-@media (min-width: 768px) {
-  .profile {
-    height: 50vw;
-    width: 50vw;
-  }
-  .profile .profile-img {
-    height: 55vw;
-  }
-  .profile .dots-1 {
-    width: 3vw;
-    right: 1.5vw;
-  }
-  .profile .dots-2 {
-    width: 3vw;
-    right: -4vw;
-  }
-  .profile .dots-3 {
-    width: 3vw;
-    left: 1.5vw;
-  }
-  .profile .dots-4 {
-    width: 3vw;
-    left: -4vw;
-  }
-}
-@media (min-width: 992px) {
-  .profile {
-    height: 40vw;
-    width: 40vw;
-  }
-  .profile .profile-img {
-    height: 45vw;
-  }
-  .profile .dots-1 {
-    width: 1.5vw;
-    right: 0.75vw;
-  }
-  .profile .dots-2 {
-    width: 1.5vw;
-    right: -2vw;
-  }
-  .profile .dots-3 {
-    width: 1.5vw;
-    left: 0.75vw;
-  }
-  .profile .dots-4 {
-    width: 1.5vw;
-    left: -2vw;
-  }
-}
-@media (min-width: 1200px) {
-  .profile {
-    height: 35vw;
-    width: 35vw;
-  }
-  .profile .profile-img {
-    height: 40vw;
-  }
-  .profile .dots-1 {
-    width: 1.5vw;
-    right: 0.75vw;
-  }
-  .profile .dots-2 {
-    width: 1.5vw;
-    right: -2vw;
-  }
-  .profile .dots-3 {
-    width: 1.5vw;
-    left: 0.75vw;
-  }
-  .profile .dots-4 {
-    width: 1.5vw;
-    left: -2vw;
-  }
+/*====================================================================================================================*/
+/*==================================================== Custom CSS ====================================================*/
+/*====================================================================================================================*/
+body {
+  --custom-linear-gradient: linear-gradient(130deg, #1e30f3 0%, #fd7e14 100%);
 }
 
-/* Custom CSS */
+.profile-img-container {
+  position: relative;
+}
+
+.profile-img-container::before,
+.profile-img-container::after {
+  --scale: 0;
+  --arrow-size: 10px;
+  --tooltip-color: #1e30f3;
+  --tooltip-text: "Click here to learn more about me!";
+
+  position: absolute;
+  z-index: 1;
+  top: -65px;
+  background-color: var(--tooltip-color);
+  padding: 10px 15px;
+  border-radius: 10px;
+  transform: scale(var(--scale));
+  transition: 100ms transform;
+  transform-origin: bottom center;
+  color: white;
+}
+
+.profile-img-container:hover::before,
+.profile-img-container:hover::after,
+.profile-img-container:focus::before,
+.profile-img-container:focus::after {
+  --scale: 1;
+}
+
+.profile-img-container::before{
+  content: var(--tooltip-text);
+}
+
 .bg-gradient {
-  background: linear-gradient(130deg, #1e30f3 0%, #fd7e14 100%);
+  background: var(--custom-linear-gradient);
 }
 
 .text-gradient {
-  background-image: linear-gradient(130deg, #1e30f3 0%, #fd7e14 100%);
+  background-image: var(--custom-linear-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -11806,7 +11745,7 @@ a.text-orange:hover {
 }
 
 .anim-change-bg:hover {
-  background: linear-gradient(130deg, #1e30f3 0%, #fd7e14 100%);
+  background: var(--custom-linear-gradient)
   color: white !important;
 }
 
@@ -11859,16 +11798,16 @@ a.text-orange:hover {
   100% { scale: 1;}
 }
 
-/* About award photo queries */
 .max-img {
   width: 100% !important;
 }
 
 ul li::marker {
-  color: #1e30f3;
+  color: #1e30f3 !important;;
 }
 
 
+/* Small phone */
 @media only screen and (min-width: 0px) {
   .max-img {
     min-height: 300px !important;
@@ -11878,13 +11817,42 @@ ul li::marker {
     background-image: none !important;
   }
 
-  .ps-proj-desc {
+  .proj-ps-desc {
     padding-left: 0px;
     padding-right: 0px;
   }
+
+  .proj-bullet {
+    margin-left: 0px !important;
+  }
 }
 
-@media only screen and (min-width: 600px) {
+/* Common phone */
+@media only screen and (min-width: 576px) {
+  .profile {
+    height: 60vw;
+    width: 60vw;
+  }
+  .profile .profile-img {
+    height: 65vw;
+  }
+  .profile .dots-1 {
+    width: 3vw;
+    right: 1.5vw;
+  }
+  .profile .dots-2 {
+    width: 3vw;
+    right: -4vw;
+  }
+  .profile .dots-3 {
+    width: 3vw;
+    left: 1.5vw;
+  }
+  .profile .dots-4 {
+    width: 3vw;
+    left: -4vw;
+  }
+
   .max-img {
     min-height: 400px !important;
   }
@@ -11892,26 +11860,102 @@ ul li::marker {
   .custom-bg-left {
     background-image: url('../images/bg_left.png') !important;
   }
-
-  .ps-proj-desc {
+  
+  .proj-ps-desc {
     padding-left: 35px;
     padding-right: 20px;
   }
+
+  .proj-bullet {
+    margin-left: 10px !important;
+  }
 }
 
+/* tablet */
 @media only screen and (min-width: 768px) {
+  .profile {
+    height: 50vw;
+    width: 50vw;
+  }
+  .profile .profile-img {
+    height: 55vw;
+  }
+  .profile .dots-1 {
+    width: 3vw;
+    right: 1.5vw;
+  }
+  .profile .dots-2 {
+    width: 3vw;
+    right: -4vw;
+  }
+  .profile .dots-3 {
+    width: 3vw;
+    left: 1.5vw;
+  }
+  .profile .dots-4 {
+    width: 3vw;
+    left: -4vw;
+  }
   .max-img {
     min-height: 500px !important;
   }
 } 
 
+/* notebook */
 @media only screen and (min-width: 992px) {
+  .profile {
+    height: 40vw;
+    width: 40vw;
+  }
+  .profile .profile-img {
+    height: 45vw;
+  }
+  .profile .dots-1 {
+    width: 1.5vw;
+    right: 0.75vw;
+  }
+  .profile .dots-2 {
+    width: 1.5vw;
+    right: -2vw;
+  }
+  .profile .dots-3 {
+    width: 1.5vw;
+    left: 0.75vw;
+  }
+  .profile .dots-4 {
+    width: 1.5vw;
+    left: -2vw;
+  }
   .max-img {
     min-height: 700px !important;
   }
 } 
 
+/* laptop/desktop */
 @media only screen and (min-width: 1200px) {
+  .profile {
+    height: 35vw;
+    width: 35vw;
+  }
+  .profile .profile-img {
+    height: 40vw;
+  }
+  .profile .dots-1 {
+    width: 1.5vw;
+    right: 0.75vw;
+  }
+  .profile .dots-2 {
+    width: 1.5vw;
+    right: -2vw;
+  }
+  .profile .dots-3 {
+    width: 1.5vw;
+    left: 0.75vw;
+  }
+  .profile .dots-4 {
+    width: 1.5vw;
+    left: -2vw;
+  }
   .max-img {
     min-height: 650px !important;
   }
