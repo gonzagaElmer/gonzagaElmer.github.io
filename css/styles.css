@@ -11643,6 +11643,9 @@ html {
 /*====================================================================================================================*/
 :root {
   --custom-linear-gradient: linear-gradient(130deg, #1e30f3 0%, #fd7e14 100%);
+  --tooltip-text: "Click the photo to learn more about me!";
+  --text-or: "or";
+  --tooltip-spacing: 25px;
 }
 
 .profile-img-container {
@@ -11653,18 +11656,18 @@ html {
 .profile-img-container::after {
   --scale: 0;
   --arrow-size: 10px;
-  --tooltip-color: #1e30f3;
-  --tooltip-text: "Click here to learn more about me!";
+  --tooltip-color: #fd7e14;
 
   position: absolute;
   z-index: 1;
-  top: -65px;
+  bottom: var(--tooltip-spacing);
+  right: calc(var(--tooltip-spacing) * -1);
   background-color: var(--tooltip-color);
   padding: 10px 15px;
   border-radius: 10px;
   transform: scale(var(--scale));
   transition: 100ms transform;
-  transform-origin: bottom center;
+  transform-origin: top center;
   color: white;
 }
 
@@ -11683,6 +11686,15 @@ html {
 .profile-img-container::before,
 .profile-img-container::after {
   display: none;
+}
+
+.profile-img-text::after {
+  content: var(--tooltip-text);
+}
+
+.profile-img-or::after {
+  content: var(--text-or);
+  text-align: center;
 }
 
 .bg-gradient {
@@ -11969,5 +11981,12 @@ ul li::marker {
   .profile-img-container::before,
   .profile-img-container::after {
     display: block;
+  }
+
+  .profile-img-text::before,
+  .profile-img-text::after,
+  .profile-img-or::before,
+  .profile-img-or::after {
+    display: none;
   }
 }
