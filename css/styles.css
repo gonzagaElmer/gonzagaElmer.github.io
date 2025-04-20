@@ -11762,15 +11762,6 @@ a.text-orange:hover {
   bottom: -50px;
 }
 
-.anim-change-bg:hover {
-  background: var(--custom-linear-gradient);
-  color: white !important;
-}
-
-.anim-darken-shadow:hover {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
-
 .anim-left-to-right {
   position: relative;
   animation: animLeftToRight ease-in-out 1s;
@@ -11824,6 +11815,19 @@ ul li::marker {
   color: #1e30f3 !important;;
 }
 
+.anim-change-bg,
+.anim-darken-shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
+}
+
+.anim-change-bg:hover {
+  background: var(--custom-linear-gradient);
+  color: white !important;
+}
+
+.anim-darken-shadow:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
 
 /* Small phone */
 @media only screen and (min-width: 0px) {
