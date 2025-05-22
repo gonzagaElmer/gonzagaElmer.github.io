@@ -11642,7 +11642,9 @@ html {
 /*==================================================== Custom CSS ====================================================*/
 /*====================================================================================================================*/
 :root {
-  --custom-linear-gradient: linear-gradient(130deg, #1e30f3 0%, #fd7e14 100%);
+  --custom-orange: #fd7e14;
+  --custom-blue: #1e30f3;
+  --custom-linear-gradient: linear-gradient(130deg, var(--custom-blue)  0%, var(--custom-orange) 100%);
   --tooltip-text: "Click the photo to learn more about me!";
   --text-or: "or";
   --tooltip-spacing: 25px;
@@ -11699,6 +11701,14 @@ html {
 
 .bg-gradient {
   background: var(--custom-linear-gradient);
+}
+
+.bg-custom-blue {
+  background-color: var(--custom-blue);
+}
+
+.bg-custom-orange {
+  background-color: var(--custom-orange);
 }
 
 .text-gradient {
@@ -11827,6 +11837,10 @@ ul li::marker {
 
 .anim-darken-shadow:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn-scale:hover {
+  scale: 1.05;
 }
 
 /* Small phone */
