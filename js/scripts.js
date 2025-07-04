@@ -1,3 +1,35 @@
+// Navbar ------------------------------------------------------------------------------------
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+// var currentScrollPos = window.pageYOffset;
+// var navbar = document.getElementsByClassName("navbar")[0]
+// console.log("prevScrollpos: " + prevScrollpos)
+// console.log("currentScrollPos: " + currentScrollPos)
+// console.log("(prevScrollpos > currentScrollPos): " + (prevScrollpos > currentScrollPos))
+
+//   if (prevScrollpos > currentScrollPos) {
+//     navbar.classList.add("navbar-show")
+//     navbar.classList.remove("navbar-hide")
+//   } else {
+//     navbar.classList.add("navbar-hide")
+//     navbar.classList.remove("navbar-show")
+//   }
+// }
+const NAV = document.querySelector('nav');
+
+let timer = null;
+
+window.addEventListener('scroll', function() {
+  if (timer !== null) {
+    clearTimeout(timer);
+    NAV.classList.add('sticky-top');
+  }
+  timer = setTimeout(function() {
+    NAV.classList.remove('sticky-top');
+  }, 1000);
+}, false);
+
+
 // Projects -----------------------------------------------------------------------------------
 var animDelay = document.getElementsByClassName("anim-delay");
 
