@@ -1,36 +1,105 @@
-// Navbar ------------------------------------------------------------------------------------
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-// var currentScrollPos = window.pageYOffset;
-// var navbar = document.getElementsByClassName("navbar")[0]
-// console.log("prevScrollpos: " + prevScrollpos)
-// console.log("currentScrollPos: " + currentScrollPos)
-// console.log("(prevScrollpos > currentScrollPos): " + (prevScrollpos > currentScrollPos))
+// SPA / MPA mode ---------------------------------------------------------------------------
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const isSpaValue = urlParams.get('is_mode_spa');
+const isSpaMode = (isSpaValue === 'true');
 
-//   if (prevScrollpos > currentScrollPos) {
-//     navbar.classList.add("navbar-show")
-//     navbar.classList.remove("navbar-hide")
-//   } else {
-//     navbar.classList.add("navbar-hide")
-//     navbar.classList.remove("navbar-show")
-//   }
-// }
+var navModeBtnText = document.getElementById("navbarDropdownModeLink")
+if (isSpaMode) {
+    navModeBtnText.textContent = "SPA Mode"
+    setScrollHighlighting();
+} else {
+    navModeBtnText.textContent = "MPA Mode"
+}
+
+function setScrollHighlighting() {
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function highlightNavLink() {
+            let currentSectionId = null;
+            const scrollPosition = window.scrollY;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const headerHeight = document.querySelector('nav').offsetHeight || 0;
+                const offsetTolerance = 200;
+
+                if (scrollPosition >= sectionTop - headerHeight - offsetTolerance &&
+                    scrollPosition < sectionTop + sectionHeight - headerHeight - offsetTolerance) {
+                    currentSectionId = section.id;
+                    console.log("section.id=" + section.id)
+
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-primary');
+
+                        if (link.getAttribute('href') === `#${currentSectionId}`) {
+                            link.classList.add('text-primary');
+                        } else {
+                            const aboutSections = ["section-overView", "section-workExp", "section-techSkills", "section-education"];
+                            if (aboutSections.includes(currentSectionId)) {
+                                document.getElementById("navbarDropdownAboutLink").classList.add("text-primary");
+                            }
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightNavLink);
+        highlightNavLink();
+    });
+}
+
+
+// Navbar toggling ------------------------------------------------------------------------------------
 const NAV = document.querySelector('nav');
-
 let timer = null;
+let isMouseOverNav = false;
+const delaySec = 1000;
 
+// Ensure nav is visible when mouse is over it   
+NAV.addEventListener('mouseenter', function() {
+    isMouseOverNav = true;
+    if (timer !== null) {
+        clearTimeout(timer);
+        timer = null;
+    }
+    NAV.classList.add('sticky-top'); 
+});
+
+// Only hide if the mouse is truly outside the nav and its descendants
+NAV.addEventListener('mouseleave', function() {
+  isMouseOverNav = false;
+  // Start a timer to hide the nav if the mouse remains outside
+  timer = setTimeout(function() {
+    if (!isMouseOverNav) {
+      NAV.classList.remove('sticky-top');
+    }
+  }, delaySec);
+});
+
+// Always show nav when scrolling
 window.addEventListener('scroll', function() {
+  // Clear any active hide timer if scrolling starts
   if (timer !== null) {
     clearTimeout(timer);
-    NAV.classList.add('sticky-top');
+    timer = null;
   }
+  NAV.classList.add('sticky-top'); 
+
   timer = setTimeout(function() {
-    NAV.classList.remove('sticky-top');
-  }, 1000);
+    if (!isMouseOverNav) {
+      NAV.classList.remove('sticky-top');
+    }
+  }, delaySec);
 }, false);
 
 
 // Projects -----------------------------------------------------------------------------------
+
 var animDelay = document.getElementsByClassName("anim-delay");
 
 if (animDelay != null) {

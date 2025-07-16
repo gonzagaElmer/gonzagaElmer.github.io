@@ -3076,6 +3076,23 @@ textarea.form-control-lg {
   --bs-gradient: none;
 }
 
+.btn-outline-orange {
+  --bs-btn-color: #fd7e14;
+  --bs-btn-border-color: #fd7e14;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #fd7e14;
+  --bs-btn-hover-border-color: #fd7e14;
+  --bs-btn-focus-shadow-rgb: 255, 193, 7;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #fd7e14;
+  --bs-btn-active-border-color: #fd7e14;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(255, 255, 255, 0.125);
+  --bs-btn-disabled-color: #fd7e14;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #fd7e14;
+  --bs-gradient: none;
+}
+
 .btn-outline-danger {
   --bs-btn-color: #dc3545;
   --bs-btn-border-color: #dc3545;
@@ -11643,11 +11660,51 @@ html {
 /*====================================================================================================================*/
 :root {
   --custom-orange: #fd7e14;
+  --custom-orange-light: #fd7e140b;
   --custom-blue: #1e30f3;
+  --custom-blue-light: #1e30f30b;
   --custom-linear-gradient: linear-gradient(130deg, var(--custom-blue)  0%, var(--custom-orange) 100%);
   --tooltip-text: "Click the photo to learn more about me!";
   --text-or: "or";
   --tooltip-spacing: 25px;
+}
+
+/* spa - blue bg */
+.custom-bg-spa {
+  background-image: linear-gradient(270deg, white, var(--custom-blue-light));
+}
+
+/* mpa - orange bg */
+.custom-bg-mpa {
+  background-image: linear-gradient(270deg, white, var(--custom-orange-light));
+}
+
+.pt-custom-nav {
+  padding-top: 3.75rem !important;
+}
+
+.dropdown-item-orange {
+  display: block;
+  width: 100%;
+  padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+  clear: both;
+  font-weight: 400;
+  color: var(--bs-dropdown-link-color);
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.dropdown-item-orange:hover, .dropdown-item-orange:focus {
+  color: var(--bs-dropdown-link-hover-color);
+  background-color: var(--custom-orange-light);
+}
+.dropdown-item-orange.active, .dropdown-item-orange:active {
+  color: var(--bs-dropdown-link-active-color);
+  text-decoration: none;
+  background-color: var(--custom-orange);
 }
 
 .profile-img-container {
@@ -11718,7 +11775,7 @@ html {
 }
 
 .text-orange {
-  color: #fd7e14;
+  color: var(--custom-orange);
 }
 
 a {
@@ -11731,7 +11788,7 @@ a:hover {
 }
 
 a.text-orange:hover {
-    color: #fd7e14;
+    color: var(--custom-orange);
 }
 
 .custom-bg-right {    
