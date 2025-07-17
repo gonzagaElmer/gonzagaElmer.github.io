@@ -16,6 +16,19 @@ function setScrollHighlighting() {
     document.addEventListener('DOMContentLoaded', () => {
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
+        const aboutNavLinks = document.querySelectorAll('.about-subnav');
+
+        // home nav click listener - scroll to topmost
+        document.getElementById("spaNavHome").addEventListener('click', function(event) {
+            event.preventDefault();
+            window.scrollTo(0, 0);
+        }); 
+
+
+        // scroll listener
+        window.addEventListener('scroll', highlightNavLink);
+        highlightNavLink();
+
 
         function highlightNavLink() {
             let currentSectionId = null;
@@ -30,26 +43,30 @@ function setScrollHighlighting() {
                 if (scrollPosition >= sectionTop - headerHeight - offsetTolerance &&
                     scrollPosition < sectionTop + sectionHeight - headerHeight - offsetTolerance) {
                     currentSectionId = section.id;
-                    console.log("section.id=" + section.id)
-
-                    navLinks.forEach(link => {
-                        link.classList.remove('text-primary');
-
-                        if (link.getAttribute('href') === `#${currentSectionId}`) {
-                            link.classList.add('text-primary');
-                        } else {
-                            const aboutSections = ["section-overView", "section-workExp", "section-techSkills", "section-education"];
-                            if (aboutSections.includes(currentSectionId)) {
-                                document.getElementById("navbarDropdownAboutLink").classList.add("text-primary");
-                            }
-                        }
-                    });
                 }
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-primary');
+
+                    if (link.getAttribute('href') === `#${currentSectionId}`) {
+                        link.classList.add('text-primary');
+                    } else {
+                        // About me - highlighting
+                        const aboutSections = ["section-overView", "section-workExp", "section-techSkills", "section-education"];
+                        if (aboutSections.includes(currentSectionId)) {
+                            document.getElementById("aboutSubNav").classList.add("text-primary");
+                        }
+                    }
+                });
+
+                aboutNavLinks.forEach(subLink => {
+                    subLink.classList.remove('text-primary');
+                    if (subLink.getAttribute('href') === `#${currentSectionId}`) {
+                        subLink.classList.add('text-primary')
+                    }
+                })
             });
         }
-
-        window.addEventListener('scroll', highlightNavLink);
-        highlightNavLink();
     });
 }
 

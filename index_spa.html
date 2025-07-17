@@ -23,6 +23,7 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <!-- Mode Navs -->
                             <li class="nav-mode">
                                 <div class="dropdown">
                                     <a class=" btn btn-outline-primary dropdown-toggle" href="#" role="button" id="navbarDropdownModeLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,25 +31,26 @@
                                     </a>
 
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownModeLink">
-                                        <li><a class="dropdown-item" href="index.html">Multi Page App</a></li>
+                                        <li><a class="dropdown-item" href="index.html">Multi-Page App</a></li>
                                         <li><a class="dropdown-item" href="#">Single Page App</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li class="nav-item"><a class="nav-link nav-spa-home text-primary" href="#section-home">Home</a></li>
+                            <!-- SPA Navs -->
+                            <li class="nav-item"><a class="nav-link text-primary" href="#section-home" id="spaNavHome">Home</a></li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link nav-spa-about dropdown-toggle" href="#" id="navbarDropdownAboutLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="aboutSubNav" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     About Me
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdownAboutLink">
-                                    <li><a class="dropdown-item" href="#section-overView">Overview</a></li>
-                                    <li><a class="dropdown-item" href="#section-workExp">Work exp and awards</a></li>
-                                    <li><a class="dropdown-item" href="#section-techSkills">Tech and soft skills </a></li>
-                                    <li><a class="dropdown-item" href="#section-education">Educational attainments </a></li>
+                                <ul class="dropdown-menu dropdown-menu" aria-labelledby="aboutSubNav">
+                                    <li><a class="dropdown-item about-subnav" href="#section-overView">Overview</a></li>
+                                    <li><a class="dropdown-item about-subnav" href="#section-workExp">Work exp and awards</a></li>
+                                    <li><a class="dropdown-item about-subnav" href="#section-techSkills">Tech and soft skills </a></li>
+                                    <li><a class="dropdown-item about-subnav" href="#section-education">Educational attainments </a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link nav-spa-project" href="#section-project">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link nav-spa-contact" href="#section-contact">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#section-project">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
