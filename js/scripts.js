@@ -16,7 +16,7 @@ function setScrollHighlighting() {
     document.addEventListener('DOMContentLoaded', () => {
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
-        const aboutNavLinks = document.querySelectorAll('.about-subnav');
+        const aboutMeSubNavLinks = document.querySelectorAll('.about-subnav');
 
         // home nav click listener - scroll to topmost
         document.getElementById("spaNavHome").addEventListener('click', function(event) {
@@ -24,11 +24,9 @@ function setScrollHighlighting() {
             window.scrollTo(0, 0);
         }); 
 
-
         // scroll listener
         window.addEventListener('scroll', highlightNavLink);
         highlightNavLink();
-
 
         function highlightNavLink() {
             let currentSectionId = null;
@@ -38,7 +36,7 @@ function setScrollHighlighting() {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
                 const headerHeight = document.querySelector('nav').offsetHeight || 0;
-                const offsetTolerance = 200;
+                const offsetTolerance = 50;
 
                 if (scrollPosition >= sectionTop - headerHeight - offsetTolerance &&
                     scrollPosition < sectionTop + sectionHeight - headerHeight - offsetTolerance) {
@@ -49,20 +47,26 @@ function setScrollHighlighting() {
                     link.classList.remove('text-primary');
 
                     if (link.getAttribute('href') === `#${currentSectionId}`) {
+                        // Home, Projects and Contact nav highlighting
                         link.classList.add('text-primary');
+
+                        // Close the shown About me's menu when scroll position is not within About me sections
+                        document.getElementById("aboutNav").classList.remove("show");
+                        document.getElementById("aboutSubNav").classList.remove("show");
                     } else {
-                        // About me - highlighting
-                        const aboutSections = ["section-overView", "section-workExp", "section-techSkills", "section-education"];
-                        if (aboutSections.includes(currentSectionId)) {
-                            document.getElementById("aboutSubNav").classList.add("text-primary");
+                        // About me nav highlighting
+                        const aboutMeSections = ["section-overView", "section-workExp", "section-techSkills", "section-education"];
+                        if (aboutMeSections.includes(currentSectionId)) {
+                            document.getElementById("aboutNav").classList.add("text-primary");
                         }
                     }
                 });
 
-                aboutNavLinks.forEach(subLink => {
+                // About me sub-navs highlighting
+                aboutMeSubNavLinks.forEach(subLink => {
                     subLink.classList.remove('text-primary');
                     if (subLink.getAttribute('href') === `#${currentSectionId}`) {
-                        subLink.classList.add('text-primary')
+                        subLink.classList.add('text-primary');
                     }
                 })
             });
