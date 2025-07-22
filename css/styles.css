@@ -11610,7 +11610,8 @@ html {
   max-height: 40rem;
   max-width: 40rem;
 }
-.profile .profile-img {
+.profile .profile-img,
+.profile .profile-img-mpa {
   height: 80vw;
   max-height: 45rem;
   position: absolute;
@@ -11663,10 +11664,23 @@ html {
   --custom-orange-light: #fd7e140a;
   --custom-blue: #1e30f3;
   --custom-blue-light: #1e30f30a;
-  --custom-linear-gradient: linear-gradient(130deg, var(--custom-blue)  0%, var(--custom-orange) 100%);
+  --custom-linear-gradient-spa: linear-gradient(130deg, var(--custom-blue)  0%, var(--custom-orange) 100%);
+  --custom-linear-gradient-mpa: linear-gradient(130deg, var(--custom-orange)  25%, var(--custom-blue) 100%);
   --tooltip-text: "Click the photo to learn more about me!";
   --text-or: "or";
   --tooltip-spacing: 25px;
+}
+
+.bullet-mpa {
+  list-style: none;
+}
+
+.bullet-mpa li::before {
+  content: "\2022";
+  color: var(--custom-orange);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.2em;
 }
 
 .custom-bg-spa-top {
@@ -11684,7 +11698,7 @@ html {
 
 /* mpa - orange bg */
 .custom-bg-mpa {
-  background-image: linear-gradient(270deg, white, var(--custom-orange-light));
+  background-image: linear-gradient(250deg, white, var(--custom-orange-light));
 }
 
 .pt-custom-nav {
@@ -11715,6 +11729,7 @@ html {
   background-color: var(--custom-orange);
 }
 
+/* profile-img SPA start */
 .profile-img-container {
   position: relative;
 }
@@ -11764,8 +11779,63 @@ html {
   text-align: center;
 }
 
-.bg-gradient {
-  background: var(--custom-linear-gradient);
+/* profile-img MPA start */
+.profile-img-container-mpa {
+  position: relative;
+}
+
+.profile-img-container-mpa::before,
+.profile-img-container-mpa::after {
+  --scale: 0;
+  --arrow-size: 10px;
+  --tooltip-color: var(--custom-blue);
+
+  position: absolute;
+  z-index: 1;
+  bottom: var(--tooltip-spacing);
+  right: calc(var(--tooltip-spacing) * -1);
+  background-color: var(--tooltip-color);
+  padding: 10px 15px;
+  border-radius: 10px;
+  transform: scale(var(--scale));
+  transition: 100ms transform;
+  transform-origin: top center;
+  color: white;
+}
+
+.profile-img-container-mpa:hover::before,
+.profile-img-container-mpa:hover::after,
+.profile-img-container-mpa:focus::before,
+.profile-img-container-mpa:focus::after {
+  --scale: 1;
+}
+
+.profile-img-container-mpa::before{
+  content: var(--tooltip-text);
+}
+
+/* dont show tooltip if not desktop/laptop */
+.profile-img-container-mpa::before,
+.profile-img-container-mpa::after {
+  display: none;
+}
+
+.profile-img-text-mpa::after {
+  content: var(--tooltip-text);
+}
+
+.profile-img-or-mpa::after {
+  content: var(--text-or);
+  text-align: center;
+}
+
+
+.bg-gradient-spa {
+  background: var(--custom-linear-gradient-spa);
+}
+
+.bg-gradient-mpa {
+  background: var(--custom-linear-gradient-mpa);
 }
 
 .bg-custom-blue {
@@ -11776,8 +11846,14 @@ html {
   background-color: var(--custom-orange);
 }
 
-.text-gradient {
-  background-image: var(--custom-linear-gradient);
+.text-gradient-spa {
+  background-image: var(--custom-linear-gradient-spa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-mpa {
+  background-image: var(--custom-linear-gradient-mpa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -11830,6 +11906,11 @@ a.text-orange:hover {
   animation: animFromBottom ease-in-out 1s;
 }
 
+.anim-to-zoom {
+  position: relative;
+  animation: animZoom ease-in-out 1s;
+}
+
 .anim-zoom:hover {
   scale: 1.01 !important;
 }
@@ -11854,6 +11935,12 @@ a.text-orange:hover {
   100% { bottom: 0px;}
 }
 
+@keyframes animZoom {
+  0% { scale: 1;}
+  50% { scale: 1.01}
+  100% { scale: 1;}
+}
+
 @keyframes animZoomLoop {
   0% { scale: 1;}
   50% { scale: 1.05}
@@ -11874,7 +11961,17 @@ ul li::marker {
 }
 
 .anim-change-bg:hover {
-  background: var(--custom-linear-gradient);
+  background: var(--custom-linear-gradient-spa);
+  color: white !important;
+}
+
+.anim-change-bg-mpa,
+.anim-darken-shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.anim-change-bg-mpa:hover {
+  background: var(--custom-linear-gradient-mpa);
   color: white !important;
 }
 
@@ -11912,7 +12009,8 @@ ul li::marker {
     height: 60vw;
     width: 60vw;
   }
-  .profile .profile-img {
+  .profile .profile-img,
+  .profile .profile-img-mpa {
     height: 65vw;
   }
   .profile .dots-1 {
@@ -11963,7 +12061,8 @@ ul li::marker {
     height: 50vw;
     width: 50vw;
   }
-  .profile .profile-img {
+  .profile .profile-img,
+  .profile .profile-img-mpa {
     height: 55vw;
   }
   .profile .dots-1 {
@@ -11993,7 +12092,8 @@ ul li::marker {
     height: 40vw;
     width: 40vw;
   }
-  .profile .profile-img {
+  .profile .profile-img, 
+  .profile .profile-img-mpa {
     height: 45vw;
   }
   .profile .dots-1 {
@@ -12023,7 +12123,8 @@ ul li::marker {
     height: 35vw;
     width: 35vw;
   }
-  .profile .profile-img {
+  .profile .profile-img,
+  .profile .profile-img-mpa {
     height: 40vw;
   }
   .profile .dots-1 {
@@ -12055,6 +12156,18 @@ ul li::marker {
   .profile-img-text::after,
   .profile-img-or::before,
   .profile-img-or::after {
+    display: none;
+  }
+
+  .profile-img-container-mpa::before,
+  .profile-img-container-mpa::after {
+    display: block;
+  }
+
+  .profile-img-text-mpa::before,
+  .profile-img-text-mpa::after,
+  .profile-img-or-mpa::before,
+  .profile-img-or-mpa::after {
     display: none;
   }
 }

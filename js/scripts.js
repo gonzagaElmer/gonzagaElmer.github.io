@@ -119,27 +119,54 @@ window.addEventListener('scroll', function() {
 }, false);
 
 
-// Projects -----------------------------------------------------------------------------------
+// Animate upward -----------------------------------------------------------------------------------
 
-var animDelay = document.getElementsByClassName("anim-delay");
+var animUpwardDelay = document.getElementsByClassName("anim-delay-upward");
 
-if (animDelay != null) {
-    setProjectsAnim();
+if (animUpwardDelay != null) {
+    setAnimUpwardDelay();
 }
 
-function setProjectsAnim() {
+function setAnimUpwardDelay() {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('anim-from-bottom'); // Add animation class when in view
-                entry.target.classList.remove('anim-delay'); // Add animation class when in view
+                entry.target.classList.remove('anim-delay-upward'); // Add animation class when in view
                 observer.unobserve(entry.target); // Stop observing after animation starts
             }
         });
     }, { threshold: 0.8 }); // Trigger when 80% of the element is in view
     
     // Select the elements you want to observe
-    const cards = document.querySelectorAll('.anim-delay');
+    const cards = document.querySelectorAll('.anim-delay-upward');
+    
+    // Start observing each element
+    cards.forEach(box => observer.observe(box));
+}
+
+
+// Animate zoom -----------------------------------------------------------------------------------
+
+var animZoomDelay = document.getElementsByClassName("anim-delay-zoom");
+
+if (animZoomDelay != null) {
+    setAnimZoomDelay();
+}
+
+function setAnimZoomDelay() {
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('anim-to-zoom'); // Add animation class when in view
+                entry.target.classList.remove('anim-delay-zoom'); // Add animation class when in view
+                observer.unobserve(entry.target); // Stop observing after animation starts
+            }
+        });
+    }, { threshold: 0.8 }); // Trigger when 80% of the element is in view
+    
+    // Select the elements you want to observe
+    const cards = document.querySelectorAll('.anim-delay-zoom');
     
     // Start observing each element
     cards.forEach(box => observer.observe(box));
