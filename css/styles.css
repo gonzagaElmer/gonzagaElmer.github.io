@@ -11666,6 +11666,7 @@ html {
   --custom-blue-light: #1e30f30a;
   --custom-linear-gradient-spa: linear-gradient(130deg, var(--custom-blue)  0%, var(--custom-orange) 100%);
   --custom-linear-gradient-mpa: linear-gradient(130deg, var(--custom-orange)  25%, var(--custom-blue) 100%);
+  --custom-linear-gradient-mpa-oa: linear-gradient(90deg, var(--custom-orange)  4%, white 0%);
   --tooltip-text: "Click the photo to learn more about me!";
   --text-or: "or";
   --tooltip-spacing: 25px;
@@ -11838,6 +11839,10 @@ html {
   background: var(--custom-linear-gradient-mpa);
 }
 
+.bg-gradient-mpa-oa {
+  background: var(--custom-linear-gradient-mpa-oa);
+}
+
 .bg-custom-blue {
   background-color: var(--custom-blue);
 }
@@ -11912,7 +11917,7 @@ a.text-orange:hover {
 }
 
 .anim-zoom:hover {
-  scale: 1.01 !important;
+  scale: 1.005 !important;
 }
 
 .anim-zoom-loop {
@@ -11981,6 +11986,10 @@ ul li::marker {
 
 .btn-scale:hover {
   scale: 1.05;
+}
+
+.card {
+  border-width: 0px !important;
 }
 
 /* Small phone */
