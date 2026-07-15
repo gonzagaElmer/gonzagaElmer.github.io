@@ -11663,11 +11663,11 @@ html {
   --custom-orange: #fd7e14;
   --custom-orange-light: #fd7e140a;
   --custom-blue: #1e30f3;
-  --custom-blue-light: #1e30f30a;
+  --custom-blue-light: #b6bcff0a;
   --custom-linear-gradient-spa: linear-gradient(130deg, var(--custom-blue)  0%, var(--custom-orange) 100%);
   --custom-linear-gradient-mpa: linear-gradient(130deg, var(--custom-orange)  25%, var(--custom-blue) 100%);
   --custom-linear-gradient-mpa-oa: linear-gradient(90deg, var(--custom-orange)  4%, white 0%);
-  --tooltip-text: "Click the photo to learn more about me!";
+  --tooltip-text: "Learn more about me!";
   --text-or: "or";
   --tooltip-spacing: 25px;
 }

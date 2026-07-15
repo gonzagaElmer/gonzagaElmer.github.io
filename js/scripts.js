@@ -55,7 +55,7 @@ function setScrollHighlighting() {
                         document.getElementById("aboutSubNav").classList.remove("show");
                     } else {
                         // About me nav highlighting
-                        const aboutMeSections = ["section-overView", "section-workExp", "section-techSkills", "section-education"];
+                        const aboutMeSections = ["section-profSkills", "section-workExp", "section-techSkills", "section-education"];
                         if (aboutMeSections.includes(currentSectionId)) {
                             document.getElementById("aboutNav").classList.add("text-primary");
                         }
