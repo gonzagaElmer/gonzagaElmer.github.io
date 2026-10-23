@@ -1,16 +1,15 @@
 // SPA / MPA mode ---------------------------------------------------------------------------
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const isSpaValue = urlParams.get('is_mode_spa');
-const isSpaMode = (isSpaValue === 'true');
 
 var navModeBtnText = document.getElementById("navbarDropdownModeLink")
-if (isSpaMode) {
-    navModeBtnText.textContent = "SPA Mode"
+var isNavModeMpa = document.getElementsByClassName("text-gradient-mpa")
+var modeText = "MPA Mode";
+if (isNavModeMpa.length < 1) {
+    modeText = "SPA Mode"
     setScrollHighlighting();
-} else {
-    navModeBtnText.textContent = "MPA Mode"
 }
+navModeBtnText.textContent = modeText;
 
 function setScrollHighlighting() {
     document.addEventListener('DOMContentLoaded', () => {
