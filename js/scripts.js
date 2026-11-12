@@ -181,7 +181,7 @@ if (expYearMonth != null) {
 
 function showResumeAndroidExp() {
     // start date (April 2022)
-    const startDate = new Date(2022, 3);
+    const startDate = new Date(2026, 3);
 
     // Get the current date
     const currentDate = new Date();
@@ -198,7 +198,11 @@ function showResumeAndroidExp() {
 
     // Display the result
     if (expYearMonth != null) {
-        document.getElementById("exp-year-month").textContent = `${yearDiff} years ${ (monthDiff > 0) ? ` and ${monthDiff} months` : ``}`;
+        const duration = yearDiff > 0
+            ? `${yearDiff} ${yearDiff == 1 ? ` year` : ` years`} and ${monthDiff} ${monthDiff == 1 ? ` month` : ' months'}`
+            : `${monthDiff} months`;
+
+        document.getElementById("exp-year-month").textContent = `${duration} (Present)`;
     }
 }
 
